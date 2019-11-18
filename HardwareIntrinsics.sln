@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29512.175
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareIntrinsics", "HardwareIntrinsics\HardwareIntrinsics.csproj", "{9E5A6C8A-F114-4D19-8850-E7C68262AFA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardwareIntrinsics.Tests", "HardwareIntrinsics.Tests\HardwareIntrinsics.Tests.csproj", "{B1134B62-2E1B-4059-897B-01CDE6AA0FFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E5A6C8A-F114-4D19-8850-E7C68262AFA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5A6C8A-F114-4D19-8850-E7C68262AFA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5A6C8A-F114-4D19-8850-E7C68262AFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5A6C8A-F114-4D19-8850-E7C68262AFA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1134B62-2E1B-4059-897B-01CDE6AA0FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1134B62-2E1B-4059-897B-01CDE6AA0FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1134B62-2E1B-4059-897B-01CDE6AA0FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1134B62-2E1B-4059-897B-01CDE6AA0FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D88A47D-B2F6-45C8-832D-F639E133331F}
+	EndGlobalSection
+EndGlobal
