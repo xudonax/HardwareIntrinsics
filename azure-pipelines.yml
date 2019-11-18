@@ -9,16 +9,15 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
     version: '3.x'
-
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
     projects: 'HardwareIntrinsics.sln'
-
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
