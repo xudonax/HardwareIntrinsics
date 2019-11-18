@@ -10,15 +10,19 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: UseDotNet@2
+- task: 'UseDotNet@2'
+  displayName: 'Use .NET Core 3.x'
   inputs:
     packageType: 'sdk'
     version: '3.x'
 - task: DotNetCoreCLI@2
+  displayName: 'Build'
   inputs:
     command: 'build'
     projects: 'HardwareIntrinsics.sln'
 - task: DotNetCoreCLI@2
+  displayName: 'Run unit tests'
   inputs:
     command: 'test'
     projects: 'HardwareIntrinsics.sln'
+    publishTestResults: true
