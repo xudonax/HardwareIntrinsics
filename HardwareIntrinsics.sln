@@ -5,7 +5,20 @@ VisualStudioVersion = 16.0.29512.175
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareIntrinsics", "HardwareIntrinsics\HardwareIntrinsics.csproj", "{9E5A6C8A-F114-4D19-8850-E7C68262AFA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardwareIntrinsics.Tests", "HardwareIntrinsics.Tests\HardwareIntrinsics.Tests.csproj", "{B1134B62-2E1B-4059-897B-01CDE6AA0FFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareIntrinsics.Tests", "HardwareIntrinsics.Tests\HardwareIntrinsics.Tests.csproj", "{B1134B62-2E1B-4059-897B-01CDE6AA0FFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{249AE4A1-2ED3-41EF-8707-F0C79CFA48F3}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{2CAAEE0E-3F6C-4923-83AF-CC8B12DA2288}"
+	ProjectSection(SolutionItems) = preProject
+		docs\_config.yml = docs\_config.yml
+		docs\index.md = docs\index.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +37,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2CAAEE0E-3F6C-4923-83AF-CC8B12DA2288} = {249AE4A1-2ED3-41EF-8707-F0C79CFA48F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D88A47D-B2F6-45C8-832D-F639E133331F}
