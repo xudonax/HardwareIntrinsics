@@ -18,11 +18,17 @@ steps:
 - task: DotNetCoreCLI@2
   displayName: 'Build'
   inputs:
-    command: 'build'
-    projects: 'HardwareIntrinsics.sln'
-- task: DotNetCoreCLI@2
-  displayName: 'Run unit tests'
+   command: 'build'
+   projects: 'HardwareIntrinsics.sln'
+#- task: DotNetCoreCLI@2
+#  displayName: 'Run unit tests'
+#  inputs:
+#    command: 'test'
+#    projects: 'HardwareIntrinsics.sln'
+#    publishTestResults: true
+- task: VSTest@2
   inputs:
-    command: 'test'
-    projects: 'HardwareIntrinsics.sln'
-    publishTestResults: true
+   codeCoverageEnabled: true
+   testSelector: 'testAssemblies'
+   testAssemblyVer2: '**\*Tests.dll'
+   runInParallel: true
