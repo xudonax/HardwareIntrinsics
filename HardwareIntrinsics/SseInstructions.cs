@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 
 namespace HardwareIntrinsics
@@ -17,7 +16,7 @@ namespace HardwareIntrinsics
 		/// <param name="left">Left side of addition</param>
 		/// <param name="right">Right side of addition</param>
 		/// <returns></returns>
-		/// <exception cref="ArgumentException">Thrown when the length of left and right is not equal</exception>
+		/// <exception cref="ArgumentException">Thrown when the length of <paramref name="left"/> and <paramref name="right"/> is not equal</exception>
 		public static unsafe ReadOnlySpan<float> Add(ReadOnlySpan<float> left, ReadOnlySpan<float> right)
 		{
 			if (left.Length != right.Length)
@@ -48,6 +47,14 @@ namespace HardwareIntrinsics
 			return totalResult;
 		}
 
+		/// <summary>
+		/// Add two <see cref="ReadOnlySpan{float}"/> of the same length (max. 4) together
+		/// </summary>
+		/// <param name="leftSpan">Left side of addition</param>
+		/// <param name="rightSpan">Right side of addition</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException">Thrown when <paramref name="leftSpan"/> and <paramref name="rightSpan"/> do not have the same length</exception>
+		/// <exception cref="ArgumentException">Thrown when <paramref name="leftSpan"/> or <paramref name="rightSpan"/> has more than 4 items</exception>
 		public static unsafe ReadOnlySpan<float> AddSingleVector128(ReadOnlySpan<float> leftSpan, ReadOnlySpan<float> rightSpan)
 		{
 			if (leftSpan.Length != rightSpan.Length)
@@ -58,6 +65,11 @@ namespace HardwareIntrinsics
 			if (leftSpan.Length > 4)
 			{
 				throw new ArgumentException("Cannot operate on anything larger than a 128 bit number (4 floats)", nameof(leftSpan));
+			}
+
+			if (rightSpan.Length > 4)
+			{
+				throw new ArgumentException("Cannot operate on anything larger than a 128 bit number (4 floats)", nameof(rightSpan));
 			}
 
 			fixed (float* leftAddress = leftSpan)
